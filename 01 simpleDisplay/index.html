@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        input[type='file'] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Serial No</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>CV Upload</th>
+                <th>Project Details</th>
+            </tr>
+        </thead>
+        <tbody id="studentTableBody">
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td><img src="student1.jpg" alt="John Doe" width="50"></td>
+                <td>
+                    <button onclick="document.getElementById('cvUpload1').click()">Upload CV</button>
+                    <input type="file" id="cvUpload1" accept=".pdf" onchange="validateFile(event, 'cvName1')">
+                    <p id="cvName1"></p>
+                </td>
+                <td><a href="project1.html" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td><img src="student2.jpg" alt="Jane Smith" width="50"></td>
+                <td>
+                    <button onclick="document.getElementById('cvUpload2').click()">Upload CV</button>
+                    <input type="file" id="cvUpload2" accept=".pdf" onchange="validateFile(event, 'cvName2')">
+                    <p id="cvName2"></p>
+                </td>
+                <td><a href="project2.html" target="_blank">View Project</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function validateFile(event, elementId) {
+            const file = event.target.files[0];
+            if (file) {
+                if (file.type !== "application/pdf") {
+                    alert("Only PDF files are allowed.");
+                    event.target.value = "";
+                    document.getElementById(elementId).textContent = "";
+                } else {
+                    document.getElementById(elementId).textContent = file.name;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

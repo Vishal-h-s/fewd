@@ -1,0 +1,133 @@
+<!-- Problem-2
+Create a Portfolio page using HTML , it should contain 
+-> Self introduction
+-> skills 
+-> projects/work experiences (Git links)
+-> Feedback /achivements
+-> Education profile 
+-> Contact information.(Social media /phone /email)
+
+
+Note: once you create the poftfolio upload the page with neccesary document to Github account with public access -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        #nav-items {
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul id="nav-items">
+            <li><a href="#home" onclick="showAll()">Home</a></li>
+            <li><a href="#skills" onclick="showAll()">Skills</a></li>
+            <li><a href="#projects" onclick="showAll()">Projects</a></li>
+            <li><a href="#feedback" onclick="showAll()">Feedback</a></li>
+            <li><a href="#education" onclick="showAll()">Education</a></li>
+            <li><a href="#contact" onclick="showAll()">Contact</a></li>
+            <li>
+                <form action="#" method="get" class="horizontal">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Submit</button>
+                </form>
+            </li>
+            <li><a href="#signup" onclick="showSection('signup')">Signup</a></li>
+            <li><a href="#login" onclick="showSection('login')">Login</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" hidden: false>
+        <h2>Self Introduction</h2>
+        <p>Hello! My name is H. S. Vishal. I am a CS Engineer with a passion for FEWD</p>
+    </section>
+
+    <section id="skills" hidden: false>
+        <h2>Skills</h2>
+        <ul>
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+        </ul>
+    </section>
+
+    <section id="projects" hidden: false>
+        <h2>Projects/ Work Experience</h2>
+        <ul>
+            <li><a href="https://github.com/Vishal-h-s">Project 1</a></li>
+            <li><a href="https://github.com/Vishal-h-s">Project 2</a></li>
+            <li><a href="https://github.com/Vishal-h-s">Project 3</a></li>
+        </ul>
+    </section>
+
+    <section id="feedback" hidden:false>
+        <h2>Feedback/ Achievements</h2>
+        <ul>
+            <li>Feedback/ Achievement 1</li>
+            <li>Feedback/ Achievement 2</li>
+            <li>Feedback/ Achievement 3</li>
+        </ul>
+    </section>
+
+    <section id="education" hidden:false>
+        <h2>Education Profile</h2>
+        <p>CSE from KMIT -2026</p>
+    </section>
+
+    <section id="contact" hidden:false>
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:dynamicvishal360@gmail.com">dynamicvishal360@gmail.com</a></p>
+        <p>Phone: 8885652834</p>
+    </section>
+
+    <article id="autherntication">
+        <section id="login"  hidden>
+            <h2>Login</h2>
+            <form action="#" method="post" class="vertical">
+                <input type="text" placeholder="username or email">
+                <input type="password" placeholder="password">
+                <button type="login">Login</button>
+            </form>
+        </section>
+
+        <section id="signup"  hidden>
+            <h2>Sign up</h2>
+            <form action="#" method="post" class="vertical">
+                <input type="text" placeholder="email">
+                <input type="email" placeholder="username">
+                <input type="password" placeholder="password">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </article>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.hidden = true;
+            });
+            document.getElementById(sectionId).hidden = false;
+        }
+
+        function showAll() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                if (section.id !== 'login' && section.id !== 'signup') {
+                    section.hidden = false;
+                } else {
+                    section.hidden = true;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

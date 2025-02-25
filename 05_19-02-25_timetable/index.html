@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1">
+    <title>College Timetable (Bootstrap Grid)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .timetable-box {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            align-items: center;  /* Vertically center */
+            justify-content: center;  /* Horizontally center */
+            height: 100%; /* Ensure the cell takes full height */
+        }
+
+        .header {
+            background-color: #343a40;
+            color: white;
+            font-weight: bold;
+        }
+
+        .row {
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid mt-4 ">
+        <h3 class="text-center">College Timetable</h3>
+
+        <!-- Time Slot Headers -->
+        <div class="row text-center ">
+            <div class="col-1 timetable-box header">Day/Time</div>
+            <div class="col-1 timetable-box header">9:30 - 10:20</div>
+            <div class="col-1 timetable-box header">10:20 - 11:10</div>
+            <div class="col-1 timetable-box header">11:10 - 11:25</div>
+            <div class="col-1 timetable-box header">11:25 - 12:15</div>
+            <div class="col-1 timetable-box header">12:15 - 1:05</div>
+            <div class="col-1 timetable-box header">1:05 - 2:00</div>
+            <div class="col-1 timetable-box header">2:00 - 2:50</div>
+            <div class="col-1 timetable-box header">2:50 - 3:40</div>
+            <div class="col-1 timetable-box header">3:40 - 4:30</div>
+        </div>
+
+        <!-- Monday -->
+        <div class="row text-center">
+            <div class="col-1 timetable-box">MON</div>
+            <div class="col-2 timetable-box">CC LAB</div>
+            <div class="col-1 timetable-box">B</div>
+            <div class="col-1 timetable-box">CC LAB</div>
+            <div class="col-1 timetable-box">NN</div>
+            <div class="col-1 timetable-box">L</div>
+            <div class="col-3 timetable-box"></div>
+        </div>
+
+        <!-- Tuesday -->
+        <div class="row text-center">
+            <div class="col-1 timetable-box">TUE</div>
+            <div class="col-2 timetable-box">FEWD LAB</div>
+            <div class="col-1 timetable-box">R</div>
+            <div class="col-1 timetable-box">FEWD LAB</div>
+            <div class="col-1 timetable-box">IOT</div>
+            <div class="col-1 timetable-box">U</div>
+            <div class="col-3 timetable-box"></div>
+        </div>
+
+        <!-- Wednesday -->
+        <div class="row text-center">
+            <div class="col-1 timetable-box">WED</div>
+            <div class="col-2 timetable-box">CC</div>
+            <div class="col-1 timetable-box">E</div>
+            <div class="col-1 timetable-box">IOT</div>
+            <div class="col-1 timetable-box">FEWD</div>
+            <div class="col-1 timetable-box">N</div>
+            <div class="col-3 timetable-box">FS</div>
+        </div>
+
+        <!-- Thursday -->
+        <div class="row text-center">
+            <div class="col-1 timetable-box">THU</div>
+            <div class="col-1 timetable-box">FEWD</div>
+            <div class="col-1 timetable-box">IOT</div>
+            <div class="col-1 timetable-box">A</div>
+            <div class="col-1 timetable-box">NN</div>
+            <div class="col-1 timetable-box">CC</div>
+            <div class="col-1 timetable-box">C</div>
+            <div class="col-3 timetable-box"></div>
+        </div>
+
+        <!-- Friday -->
+        <div class="row text-center">
+            <div class="col-1 timetable-box">FRI</div>
+            <div class="col-1 timetable-box">IOT</div>
+            <div class="col-1 timetable-box">CC</div>
+            <div class="col-1 timetable-box">K</div>
+            <div class="col-1 timetable-box">FEWD</div>
+            <div class="col-1 timetable-box">NN</div>
+            <div class="col-1 timetable-box">H</div>
+            <div class="col-3 timetable-box"></div>
+        </div>
+
+        <!-- Saturday -->
+        <div class="row text-center">
+            <div class="col-1 timetable-box">SAT</div>
+            <div class="col-1 timetable-box">IOT</div>
+            <div class="col-1 timetable-box">FEWD</div>
+            <div class="col-1 timetable-box"></div>
+            <div class="col-1 timetable-box">MENTORING</div>
+            <div class="col-1 timetable-box">CC</div>
+            <div class="col-1 timetable-box"></div>
+            <div class="col-1 timetable-box">NN</div>
+            <div class="col-1 timetable-box">NN</div>
+            <div class="col-1 timetable-box">CS</div>
+        </div>
+    </div>
+    <div class="container-fluid ">
+        <h3 class="text-center ">Subjects & Faculty</h3>
+        <div class="row text-center header">
+            <div class="col-3 timetable-box">SUBJECT</div>
+            <div class="col-6 timetable-box">SUBJECT NAME</div>
+            <div class="col-3 timetable-box">NAME OF THE FACULTY</div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-3 timetable-box">NN</div>
+            <div class="col-6 timetable-box">NEURAL NETWORKS</div>
+            <div class="col-3 timetable-box">MS. PRIYANKA SAXENA</div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-3 timetable-box">FEWD</div>
+            <div class="col-6 timetable-box">FRONT END WEB DEVELOPMENT</div>
+            <div class="col-3 timetable-box">DR. M. ANURADHA</div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-3 timetable-box">CC</div>
+            <div class="col-6 timetable-box">CLOUD COMPUTING</div>
+            <div class="col-3 timetable-box">DR. VISHAL REDDY</div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-3 timetable-box">IOT</div>
+            <div class="col-6 timetable-box">INTERNET OF THINGS</div>
+            <div class="col-3 timetable-box">DR. FAREESA FIRDOUSE</div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-3 timetable-box">CS</div>
+            <div class="col-6 timetable-box">CYBER SECURITY</div>
+            <div class="col-3 timetable-box">MS. NAGA SREE SUMA GEDDAM</div>
+        </div>
+        <div class="row text-center">
+            <div class="col-9 timetable-box">CLASS TEACHER</div>
+            <div class="col-3 timetable-box">DR.M.ANURADHA</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

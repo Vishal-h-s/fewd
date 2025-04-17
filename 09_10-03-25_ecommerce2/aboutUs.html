@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - About Us</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/300');
+            background-size: cover;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        footer {
+            padding: 30px 0;
+            background-color: #343a40;
+            color: white;
+        }
+        .team-member {
+            margin-bottom: 20px;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #dee2e6;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid #0d6efd;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::after {
+            right: -12px;
+        }
+        .right::after {
+            left: -12px;
+        }
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-container::after {
+                left: 18px;
+            }
+            .left::after, .right::after {
+                left: 18px;
+            }
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ShopEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partners.html">Partners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <i class="fas fa-user me-1"></i> Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login to Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">Forgot password?</a>
+                        <p class="mt-2 mb-0">Don't have an account? <a href="#" class="text-decoration-none">Sign up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold">About Us</h1>
+            <p class="lead">Learn more about our company and mission</p>
+        </div>
+    </header>
+
+    <!-- Our Story -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="/api/placeholder/600/400" alt="Our Story" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Our Story</h2>
+                    <p>Founded in 2010, ShopEase began as a small local store with a big vision: to make quality products accessible to everyone. What started as a modest boutique has now grown into a trusted e-commerce platform serving customers worldwide.</p>
+                    <p>Our journey has been marked by a commitment to quality, innovation, and customer satisfaction. We've grown by listening to our customers and adapting to their needs, while maintaining the personal touch that defined us from the beginning.</p>
+                    <p>Today, ShopEase continues to expand its product range and reach, embracing new technologies and sustainable practices to serve our customers better and contribute positively to the world around us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Mission & Values</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Our Mission</h3>
+                            <p class="card-text">At ShopEase, our mission is to provide high-quality, affordable products that enhance our customers' lives while promoting sustainable and ethical business practices. We strive to create a seamless shopping experience that delights our customers and builds lasting relationships.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Our Vision</h3>
+                            <p class="card-text">We envision a world where quality products are accessible to all, and where commerce serves as a force for positive change. ShopEase aims to be at the forefront of this transformation, setting new standards for customer experience, product quality, and responsible business.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+                            <h4 class="card-title">Customer First</h4>
+                            <p class="card-text">We prioritize our customers' needs and feedback in everything we do, constantly seeking ways to improve their experience with us.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-star fa-3x text-primary mb-3"></i>
+                            <h4 class="card-title">Quality Excellence</h4>
+                            <p class="card-text">We are committed to offering products of the highest quality, thoroughly testing everything we sell to ensure it meets our standards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-leaf fa-3x text-primary mb-3"></i>
+                            <h4 class="card-title">Sustainability</h4>
+                            <p class="card-text">We're dedicated to reducing our environmental footprint and promoting sustainable practices throughout our supply chain.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-container left">
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <h4 class="card-title">2010</h4>
+                            <p class="card-text">ShopEase was founded in a small retail location with just five employees and a vision to provide quality products at reasonable prices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-container right">
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <h4 class="card-title">2013</h4>
+                            <p class="card-text">Expanded to three physical stores and launched our first e-commerce website to reach customers beyond our local area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-container left">
+                    <div class="card border-0 shadow">
+                        <div class

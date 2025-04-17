@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinStore - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .page-header {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .team-member {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 0 0 0 30px;
+            border-left: 2px solid #e9ecef;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: -39px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid #007bff;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">MinStore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="partners.html">Partners</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <i class="fas fa-user me-1"></i> Login
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="page-header">
+    <div class="container text-center">
+        <h1>About Us</h1>
+        <p class="lead">Discover the story behind MinStore and our commitment to minimalist design.</p>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container">
+    <section class="mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Our Story</h2>
+                <p>MinStore was founded in 2020 with a simple mission: to create beautiful, functional products that bring minimalist elegance to everyday life. We believe that good design should be accessible to everyone.</p>
+                <p>Our team of dedicated designers and craftspeople work together to create products that are not only aesthetically pleasing but also built to last. We source sustainable materials and partner with ethical manufacturers to ensure our environmental footprint is as minimal as our designs.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="/api/placeholder/600/400" alt="Our workshop" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Our Values</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                        <h4>Sustainability</h4>
+                        <p>We're committed to using eco-friendly materials and sustainable production methods to minimize our environmental impact.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-heart fa-3x text-danger mb-3"></i>
+                        <h4>Quality</h4>
+                        <p>We believe in creating products that are built to last, with careful attention to every detail and craftsmanship.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-hand-holding-heart fa-3x text-primary mb-3"></i>
+                        <h4>Community</h4>
+                        <p>We value our relationships with customers, artisans, and partners who share our vision for sustainable, beautiful design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Our Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4>2020</h4>
+                <p>MinStore was founded with a small collection of handcrafted home goods.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2021</h4>
+                <p>Expanded our product line to include furniture and lighting solutions.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2022</h4>
+                <p>Opened our first flagship store and studio space.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2023</h4>
+                <p>Launched our sustainability initiative and plastic-free packaging.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2024</h4>
+                <p>Partnered with local artisans to create limited edition collections.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>2025</h4>
+                <p>Continuing to grow globally while maintaining our commitment to quality and sustainability.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="text-center mb-4">Our Team</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Team Member">
+                    <h4>Jane Doe</h4>
+                    <p class="text-muted">Founder & Creative Director</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Team Member">
+                    <h4>John Smith</h4>
+                    <p class="text-muted">Head of Product Design</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-member">
+                    <img src="/api/placeholder/150/150" alt="Team Member">
+                    <h4>Emily Chen</h4>
+                    <p class="text-muted">Sustainability Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>MinStore</h5>
+                <p>Minimalist designs for everyday life.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white">Home</a></li>
+                    <li><a href="about.html" class="text-white">About Us</a></li>
+                    <li><a href="products.html" class="text-white">Products</a></li>
+                    <li><a href="contact.html" class="text-white">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Connect With Us</h5>
+                <div class="d-flex gap-2">
+                    <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-pinterest fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="bg-light">
+        <div class="text-center">
+            <small>&copy; 2025 MinStore. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login to Your Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+                <hr>
+                <div class="text-center">
+                    <p class="mb-0">Don't have an account? <a href="#">Sign Up</a></p>
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -16,26 +16,19 @@ Note: once you create the poftfolio upload the page with neccesary document to G
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <style>
-        #nav-items {
-            list-style-type: none;
-            display: flex;
-            gap: 10px;
-        }
-        
-    </style>
+    
 </head>
 <body>
-    <h1 hidden="false">Abcd</h1>
-    <table hidden="false"></table>
+    <h1 >Abcd</h1>
+    <table ></table>
     <nav>
         <ul id="nav-items">
-            <li><a href="#home" onclick="showAll()">Home</a></li>
-            <li><a href="#skills" onclick="showAll()">Skills</a></li>
-            <li><a href="#projects" onclick="showAll()">Projects</a></li>
-            <li><a href="#feedback" onclick="showAll()">Feedback</a></li>
-            <li><a href="#education" onclick="showAll()">Education</a></li>
-            <li><a href="#contact" onclick="showAll()">Contact</a></li>
+            <li><a href="#home" >Home</a></li>
+            <li><a href="#skills" >Skills</a></li>
+            <li><a href="#projects" >Projects</a></li>
+            <li><a href="#feedback" >Feedback</a></li>
+            <li><a href="#education" >Education</a></li>
+            <li><a href="#contact" >Contact</a></li>
             <li>
                 <form action="#" method="get" class="horizontal">
                     <input type="text" placeholder="Search...">
@@ -47,12 +40,12 @@ Note: once you create the poftfolio upload the page with neccesary document to G
         </ul>
     </nav>
 
-    <section id="home" hidden: false>
+    <section id="home" >
         <h2>Self Introduction</h2>
         <p>Hello! My name is H. S. Vishal. I am a CS Engineer with a passion for FEWD</p>
     </section>
 
-    <section id="skills" hidden: false>
+    <section id="skills" >
         <h2>Skills</h2>
         <ul>
             <li>Skill 1</li>
@@ -61,7 +54,7 @@ Note: once you create the poftfolio upload the page with neccesary document to G
         </ul>
     </section>
 
-    <section id="projects" hidden: false>
+    <section id="projects" >
         <h2>Projects/ Work Experience</h2>
         <ul>
             <li><a href="https://github.com/Vishal-h-s">Project 1</a></li>
@@ -70,7 +63,7 @@ Note: once you create the poftfolio upload the page with neccesary document to G
         </ul>
     </section>
 
-    <section id="feedback" hidden:false>
+    <section id="feedback" >
         <h2>Feedback/ Achievements</h2>
         <ul>
             <li>Feedback/ Achievement 1</li>
@@ -79,12 +72,12 @@ Note: once you create the poftfolio upload the page with neccesary document to G
         </ul>
     </section>
 
-    <section id="education" hidden:false>
+    <section id="education" >
         <h2>Education Profile</h2>
         <p>CSE from KMIT -2026</p>
     </section>
 
-    <section id="contact" hidden:false>
+    <section id="contact" >
         <h2>Contact Information</h2>
         <p>Email: <a href="mailto:dynamicvishal360@gmail.com">dynamicvishal360@gmail.com</a></p>
         <p>Phone: 8885652834</p>
@@ -120,16 +113,7 @@ Note: once you create the poftfolio upload the page with neccesary document to G
             document.getElementById(sectionId).hidden = false;
         }
 
-        function showAll() {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                if (section.id !== 'login' && section.id !== 'signup') {
-                    section.hidden = false;
-                } else {
-                    section.hidden = true;
-                }
-            });
-        }
+    
     </script>
 </body>
 </html>

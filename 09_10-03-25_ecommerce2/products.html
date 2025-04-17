@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - YourStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .product-card {
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+        }
+        .hero-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">YourStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partners.html">Partners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <i class="fas fa-user me-2"></i>Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4">Our Products</h1>
+            <p class="lead">Discover our premium selection of quality products</p>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Filter/Categories -->
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <h4>Categories:</h4>
+                        <div class="btn-group">
+                            <button class="btn btn-outline-primary active">All</button>
+                            <button class="btn btn-outline-primary">Category 1</button>
+                            <button class="btn btn-outline-primary">Category 2</button>
+                            <button class="btn btn-outline-primary">Category 3</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card product-card">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Product 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Product One</h5>
+                            <p class="card-text">High-quality product with excellent features. Perfect for everyday use.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="h5 mb-0">$99.99</span>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card product-card">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Product 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Product Two</h5>
+                            <p class="card-text">Durable and versatile solution for your needs. Customer favorite.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="h5 mb-0">$149.99</span>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card product-card">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Product 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Product Three</h5>
+                            <p class="card-text">Modern design with premium materials. Exceeds industry standards.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="h5 mb-0">$129.99</span>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card product-card">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Product 4">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Product Four</h5>
+                            <p class="card-text">Innovative technology combined with elegant design. Best seller.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="h5 mb-0">$199.99</span>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card product-card">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Product 5">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Product Five</h5>
+                            <p class="card-text">Affordable option without compromising on quality. Great value.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="h5 mb-0">$79.99</span>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card product-card">
+                        <img src="/api/placeholder/400/300" class="card-img-top" alt="Product 6">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Product Six</h5>
+                            <p class="card-text">Limited edition item with exclusive features. Premium choice.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="h5 mb-0">$249.99</span>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>YourStore</h5>
+                    <p>Your trusted source for quality products since 2010. We pride ourselves on customer satisfaction and product excellence.</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="products.html" class="text-white">Products</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Contact</h5>
+                    <address>
+                        <p>123 Main Street<br>New York, NY 10001</p>
+                        <p>Email: info@yourstore.com<br>Phone: (123) 456-7890</p>
+                    </address>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="mt-3">
+                        <form>
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Email for newsletter">
+                                <button class="btn btn-light" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4 bg-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-md-0">© 2025 YourStore. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">Forgot password?</a>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <p>Don't have an account?</p>
+                        <button class="btn btn-outline-secondary">Create Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

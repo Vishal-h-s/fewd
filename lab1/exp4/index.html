@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="mystyles.css">
+  
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Jane Doe</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content container mt-5" id="about">
+    <h1 class="text-center">Jane Doe</h1>
+    <p class="text-center">janedoe@geemail.com</p>
+    <p class="text-center">Seeking a career opportunity in Computer Science to utilize my skills for personal and professional growth.</p>
+  </div>
+
+  <div class="container mt-5" id="academics">
+    <h2>Academics</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Institution</th>
+          <th>Year</th>
+          <th>CGPA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>B.Tech (CSE)</td>
+          <td>KMIT</td>
+          <td>2021</td>
+          <td>7.32</td>
+        </tr>
+        <tr>
+          <td>Intermediate (MPC)</td>
+          <td>Narayana Junior College</td>
+          <td>2017</td>
+          <td>93.9%</td>
+        </tr>
+        <tr>
+          <td>SSC</td>
+          <td>Vijaya Ratna Concept School</td>
+          <td>2015</td>
+          <td>9.5</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container mt-5" id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Programming: C, Java, Python</li>
+      <li>Databases: MySQL</li>
+      <li>Web Technologies: HTML, CSS, Bootstrap, ReactJS</li>
+    </ul>
+  </div>
+
+  <div class="container mt-5" id="projects">
+    <h2>Projects</h2>
+    <p>Project 1: MERN Stack Application</p>
+    <p>Project 2: Portfolio Website</p>
+  </div>
+
+  <div class="container mt-5" id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:janedoe@geemail.com" method="POST" enctype="text/plain">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="ContactName" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="ContactComment" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <footer class="footer bg-dark text-white text-center py-1 mt-5 fixed-bottom">
+    <p>&copy; 2025 Jane Doe. All rights reserved.</p>
+  </footer>
+</body>
+</html>

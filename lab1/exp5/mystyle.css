@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+main, .container mt-5 {
+    flex: 1; /* Pushes the footer to the bottom */
+}
+.navbar .nav-link {
+    font-size: 16px; /* Set a consistent font size for all navbar links */
+    color: white; /* Optional: Ensure consistent text color */
+}
+.footer {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+h1, h3 {
+    text-align: center;
+    color: #333;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+form button:hover {
+    background-color: #a44d2e;
+}

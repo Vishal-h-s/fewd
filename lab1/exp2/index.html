@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe</title>
+  <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="brand">Jane Doe</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about" class="container">
+    <h2>About</h2>
+    <p>Jane Doe is a Computer Science enthusiast seeking opportunities to grow and contribute to the tech industry.</p>
+  </section>
+
+  <section id="academics" class="container">
+    <h2>Academics</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Institution</th>
+          <th>Year</th>
+          <th>CGPA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>B.Tech (CSE)</td>
+          <td>KMIT</td>
+          <td>2021</td>
+          <td>7.32</td>
+        </tr>
+        <tr>
+          <td>Intermediate (MPC)</td>
+          <td>Narayana Junior College</td>
+          <td>2017</td>
+          <td>93.9%</td>
+        </tr>
+        <tr>
+          <td>SSC</td>
+          <td>Vijaya Ratna Concept School</td>
+          <td>2015</td>
+          <td>9.5</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <ul>
+      <li>Programming: C, Java, Python</li>
+      <li>Databases: MySQL</li>
+      <li>Web Technologies: HTML, CSS, JavaScript</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <p>Project 1: MERN Stack Application</p>
+    <p>Project 2: Portfolio Website</p>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Me</h2>
+    <form action="mailto:janedoe@geemail.com" method="POST" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="ContactName" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="ContactComment" rows="4" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Jane Doe. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Timer</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    function Timer() {
+      const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
+      const [timeRemaining, setTimeRemaining] = useState(null);
+      const [isActive, setIsActive] = useState(false);
+      const [inputValue, setInputValue] = useState('');
+      const [wasStartedOnce, setWasStartedOnce] = useState(false);
+      
+      // Live clock
+      useEffect(() => {
+        const clockInterval = setInterval(() => {
+          setCurrentTime(new Date().toLocaleTimeString());
+        }, 1000);
+        return () => clearInterval(clockInterval);
+      }, []);
+
+      // Countdown
+      useEffect(() => {
+        let interval;
+        if (isActive && timeRemaining > 0) {
+          interval = setInterval(() => {
+            setTimeRemaining(prev => {
+              if (prev > 1) return prev - 1;
+              clearInterval(interval);
+              setIsActive(false);
+              return 0;
+            });
+          }, 1000);
+        }
+        return () => clearInterval(interval);
+      }, [isActive, timeRemaining]);
+
+      const handleStartStop = () => {
+        if (!isActive) {
+          const minutesInput = parseInt(inputValue);
+          if (!wasStartedOnce) {
+            if (isNaN(minutesInput) || minutesInput <= 0) return;
+            setTimeRemaining(minutesInput * 60);
+          }
+          setWasStartedOnce(true);
+          setIsActive(true);
+        } else {
+          setIsActive(false);
+        }
+      };
+
+      const handleReset = () => {
+        setIsActive(false);
+        setWasStartedOnce(false);
+        setTimeRemaining(null);
+        setInputValue('');
+      };
+
+      const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+      };
+
+      const roundedMinutes = timeRemaining !== null
+        ? Math.floor(timeRemaining / 60) + (timeRemaining % 60 >= 30 ? 1 : 0)
+        : 0;
+
+      return (
+        <div style={{ fontFamily: 'Arial', padding: '20px' }}>
+          <h1>Smart Timer</h1>
+          <input
+            type="number"
+            value={inputValue}
+            onChange={handleInputChange}
+            placeholder="Enter time in minutes"
+            disabled={wasStartedOnce}
+          />
+          <br /><br />
+          <button onClick={handleStartStop}>{isActive ? 'Stop' : 'Start'}</button>
+          <button onClick={handleReset}>Reset</button>
+
+          <div style={{ marginTop: '20px' }}>
+            <h2>Current Time: {currentTime}</h2>
+            {wasStartedOnce && (
+              <h3>
+                Time Remaining: {roundedMinutes} minute{roundedMinutes !== 1 ? 's' : ''}
+              </h3>
+            )}
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<Timer />, document.getElementById('root'));
+  </script>
+</body>
+</html>
